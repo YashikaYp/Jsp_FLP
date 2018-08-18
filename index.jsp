@@ -1,9 +1,6 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +12,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } 
+
 </script>
 <!--//tags -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"
@@ -49,19 +48,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	color: white;
 	font-weight: bold;
 }
-.cart-box{
-    text-align:  center;
-    padding: 0.5em 3em 3em;
-    background: #2fdab8;
-    color:  white;
-    font-weight:  bold;
-    box-shadow: #00000073 0.1em 0.1em 0.2em 0.1em;
-    position: sticky;
-    bottom: 12em;
-    display: none;
+
+.cart-box {
+	text-align: center;
+	padding: 0.5em 3em 3em;
+	background: #2fdab8;
+	color: white;
+	font-weight: bold;
+	box-shadow: #00000073 0.1em 0.1em 0.2em 0.1em;
+	position: sticky;
+	bottom: 12em;
+	display: none;
 }
-
-
 </style>
 
 </head>
@@ -71,17 +69,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <body>
-		<!-- header -->
+	<!-- header -->
 	<div class="header" id="home">
 		<div class="container">
 			<ul>
-				<li style="line-height: 3em;font-size: 1em";><a href="#" data-toggle="modal" data-target="#myModal"><i
-						class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
-				<li style="line-height: 3em;font-size: 1em";><a href="#" data-toggle="modal" data-target="#myModal2"><i
-						class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up For Merchant</a></li>
-						<li style="line-height: 3em;font-size: 1em";><a href="#" data-toggle="modal" data-target="#myModal3"><i
-						class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up For Customer </a></li>
-				
+				<li style="line-height: 3em; font-size: 1em";><a href="#"
+					data-toggle="modal" data-target="#myModal"><i
+						class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In as
+						Customer</a></li>
+				<li style="line-height: 3em; font-size: 1em";><a href="#"
+					data-toggle="modal" data-target="#myModal4"><i
+						class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In as
+						Merchant</a></li>
+				<li style="line-height: 3em; font-size: 1em";><a href="#"
+					data-toggle="modal" data-target="#myModal5"><i
+						class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In as Admin</a></li>
+				<li style="line-height: 3em; font-size: 1em";><a href="#"
+					data-toggle="modal" data-target="#myModal2"><i
+						class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up For
+						Merchant</a></li>
+				<li style="line-height: 3em; font-size: 1em";><a href="#"
+					data-toggle="modal" data-target="#myModal3"><i
+						class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up For
+						Customer </a></li>
+
 			</ul>
 		</div>
 	</div>
@@ -89,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- header-bot -->
 	<div class="header-bot">
 		<div class="header-bot_inner_wthreeinfo_header_mid">
-			
+
 			<!-- header-bot -->
 			<div class="col-md-12 logo_agile">
 				<h1>
@@ -126,23 +137,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li class="active menu__item menu__item--current"><a
 									class="menu__link" href="index.html">Home <span
 										class="sr-only">(current)</span></a></li>
-								<li class=" menu__item"><a class="menu__link"
-									href="about">About</a></li>
-								<li class=" menu__item"><a class="menu__link"
-									href="#">Men's Wear</a></li>
-								<li class=" menu__item"><a class="menu__link"
-									href="#">Women's Wear</a></li>
-								<li class=" menu__item"><a class="menu__link"
-									href="#">Kid's Wear</a></li>
-								<li class=" menu__item"><a class="menu__link"
-									href="#">Electronics</a></li>
+								<li class=" menu__item"><a class="menu__link" href="about">About</a></li>
+								<li class=" menu__item"><a class="menu__link" href="#">Men's
+										Wear</a></li>
+								<li class=" menu__item"><a class="menu__link" href="#">Women's
+										Wear</a></li>
+								<li class=" menu__item"><a class="menu__link" href="#">Kid's
+										Wear</a></li>
+								<li class=" menu__item"><a class="menu__link" href="#">Electronics</a></li>
 
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</div>
-		
+
 			<div class="clearfix"></div>
 		</div>
 	</div>
@@ -159,32 +168,119 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-body modal-body-sub_agile">
 					<div class="col-md-8 modal_body_left modal_body_left1">
 						<h3 class="agileinfo_sign">Sign In</h3>
-						<form action="customer-homepage" method="post">
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" name="Name" required=""> <label>Name</label>
-								<span></span>
-							</div>
+						<form action="sign-in-as-customer" method="post">
+
 
 							<div class="styled-input">
-								<input type="email" name="Email" required=""> <label>Email</label>
+								<input type="email" name="email" required value="" /> <label>Email</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
-								<input type="password" name="password" required=""> <label>Password</label>
+								<input type="password" name="password" required value="" /> <label>Password</label>
 								<span></span>
 							</div>
 							<div class="clearfix">
-								<a href="#" class="btn btn-default" role="button">Forgot
+								<a href="forget-email" class="btn btn-default" role="button">Forgot
 									Password?</a> <span></span>
 							</div>
-							<br> <input type="submit" value="Sign In"> </br>
+							<br> <input type="submit" value="Sign In" /> </br>
 						</form>
 
 						<div class="clearfix"></div>
-						<p>
+						<!-- <p>
 							<a href="#" data-toggle="modal" data-target="#myModal2">
 								Don't have an account?</a>
-						</p>
+						</p> -->
+
+					</div>
+					<div class="col-md-4 modal_body_right modal_body_right1">
+						<img src="images/log_pic.jpg" alt=" " />
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!-- //Modal content-->
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body modal-body-sub_agile">
+					<div class="col-md-8 modal_body_left modal_body_left1">
+						<h3 class="agileinfo_sign">Sign In</h3>
+						<form action="sign-in-as-merchant" method="post">
+
+
+							<div class="styled-input">
+								<input type="email" name="email" required value="" /> <label>Email</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<input type="password" name="password" required value="" /> <label>Password</label>
+								<span></span>
+							</div>
+							<div class="clearfix">
+								<a href="forget-email" class="btn btn-default" role="button">Forgot
+									Password?</a> <span></span>
+							</div>
+							<br> <input type="submit" value="Sign In" /> </br>
+						</form>
+
+						<div class="clearfix"></div>
+						<!-- <p>
+							<a href="#" data-toggle="modal" data-target="#myModal2">
+								Don't have an account?</a>
+						</p> -->
+
+					</div>
+					<div class="col-md-4 modal_body_right modal_body_right1">
+						<img src="images/log_pic.jpg" alt=" " />
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!-- //Modal content-->
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body modal-body-sub_agile">
+					<div class="col-md-8 modal_body_left modal_body_left1">
+						<h3 class="agileinfo_sign">Sign In</h3>
+						<form action="sign-in-as-admin" method="post">
+
+
+							<div class="styled-input">
+								<input type="email" name="email" required value="" /> <label>Email</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<input type="password" name="password" required value="" /> <label>Password</label>
+								<span></span>
+							</div>
+							<div class="clearfix">
+								<a href="forget-email" class="btn btn-default" role="button">Forgot
+									Password?</a> <span></span>
+							</div>
+							<br> <input type="submit" value="Sign In" /> </br>
+						</form>
+
+						<div class="clearfix"></div>
+						<!-- <p>
+							<a href="#" data-toggle="modal" data-target="#myModal2">
+								Don't have an account?</a>
+						</p> -->
 
 					</div>
 					<div class="col-md-4 modal_body_right modal_body_right1">
@@ -211,43 +307,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3 class="agileinfo_sign">
 							Sign Up <span></span>
 						</h3>
-						<form action="merchant" method="post" onsubmit="validationPwd">
+						<form action="sign-up-mer" method="post" onsubmit="validationPwd">
 							<div class="styled-input agile-styled-input-top">
-								<input type="text" name="Name" required="" value=""> <label>Name</label>
+								<input type="text" name="name" required value=""> <label>Name</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
-								<input type="text" name="Address" required="" value="" > <label>Address</label>
+								<input type="text" name="address" required value=""> <label>Address</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
-								<input type="text" name="phone" required="" value=""> <label>Mobile</label>
+								<input type="text" name="phone1" id="phone1" required value=""> <label>Mobile</label>
 								<span></span>
 							</div>
 
 							<div class="styled-input">
-								<input type="email" name="Email" required="" value=""> <label>Email</label>
+								<input type="email" name="email" required value=""> <label>Email</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
-								<input type="password" name="password" id="pwd2" required="" value=""> <label>Password</label>
-								<span></span>
+								<input type="password" name="password" id="pwd2" required
+									value=""> <label>Password</label> <span></span>
 							</div>
 							<div class="styled-input">
-								<input type="password" name="Confirm Password" id="pwd3" required="" value="">
-								<label>Confirm Password</label> <span></span>
+								<input type="password" name="confirm-password" id="pwd3"
+									required value=""> <label>Confirm Password</label> <span></span>
 							</div>
 
-							<div class="custom-select" style="width: 200px;"
-   >
-								<label>Security Question:</label> <select>
-									<option>What is your first pet's name</option>
-									<option>Where is your home town?</option>
-									<option>What is the name of your first friend?</option>
+							<div class="custom-select" style="width: 200px;">
+								<label>Security Question:</label> <select name="ques">
+									<option value="What is your first pet's name">What is
+										your first pet's name</option>
+									<option value="Where is your home town?">Where is your
+										home town?</option>
+									<option value="What is the name of your first friend?">What
+										is the name of your first friend?</option>
 								</select>
 							</div>
 							<div class="styled-input">
-								<input type="text" name="Answer" required=""> <label>Security
+								<input type="text" name="answer" required="" value=""> <label>Security
 									Answer</label> <span></span>
 							</div>
 							<input type="submit" value="Sign Up">
@@ -271,7 +369,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //Modal2 -->
 	<!-- Modal3 -->
 	<!-- Sign Up for customer -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -280,46 +378,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="modal-body modal-body-sub_agile">
 					<div class="col-md-8 modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">
-							Sign Up
-						</h3>
-						<form action="NowSignIn" method="post" onsubmit ="return checkPassword()" onsubmit="return validationPwd1()">
+						<h3 class="agileinfo_sign">Sign Up</h3>
+						<form action="sign-up-cust" method="post"
+							onsubmit="return checkPassword()"
+							onsubmit="return validationPwd1()">
 							<div class="styled-input agile-styled-input-top">
-								<input type="text" name="Name" required="" value=""> <label>Name</label>
+								<input type="text" name="name" required="" value=""> <label>Name</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
-								<input type="text" name="Address" required="" value=""> <label>Address</label>
-								<span></span>
+								<input type="text" name="address" required="" value="">
+								<label>Address</label> <span></span>
 							</div>
 							<div class="styled-input">
-								<input type="text" name="phone" required="" value=""> <label>Mobile</label>
+								<input type="text" name="phone" id = "phone" required="" value=""> <label>Mobile</label>
 								<span></span>
 							</div>
 
 							<div class="styled-input">
-								<input type="email" name="Email" required="" value=""> <label>Email</label>
+								<input type="email" name="email" required="" value=""> <label>Email</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
-								<input type="password" name="password" id="password2" required="" value=""> <label>Password</label>
-								<span></span>
+								<input type="password" name="password" id="password2"
+									required="" value=""> <label>Password</label> <span></span>
 							</div>
 							<div class="styled-input">
-								<input type="password" name="Confirm Password" id= "password3" required="" value="">
-								<label>Confirm Password</label> <span></span>
+								<input type="password" name="confirm-password" id="password3"
+									required="" value=""> <label>Confirm Password</label> <span></span>
 							</div>
 
-							<div class="custom-select" style="width: 200px;"
-   >
-								<label>Security Question:</label> <select>
-									<option>What is your first pet's name</option>
-									<option>Where is your home town?</option>
-									<option>What is the name of your first friend?</option>
+							<div class="custom-select" style="width: 200px;">
+								<label>Security Question:</label> <select name="ques">
+									<option value="What is your first pet's name">What is
+										your first pet's name</option>
+									<option value="Where is your home town?">Where is your
+										home town?</option>
+									<option value="What is the name of your first friend?">What
+										is the name of your first friend?</option>
 								</select>
 							</div>
 							<div class="styled-input">
-								<input type="text" name="Answer" required=""> <label>Security
+								<input type="text" name="answer" required="" value=""> <label>Security
 									Answer</label> <span></span>
 							</div>
 							<input type="submit" value="Sign Up">
@@ -350,17 +450,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
 			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 			<li data-target="#myCarousel" data-slide-to="3" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="4" class=""></li>
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
 				<div class="container">
 					<div class="carousel-caption">
 						<h3>
-							The Biggest <span>Sale</span>
+							Women's <span>Section</span>
 						</h3>
-						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+
 					</div>
 				</div>
 			</div>
@@ -368,10 +466,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container">
 					<div class="carousel-caption">
 						<h3>
-							Summer <span>Collection</span>
+							Men's <span>Section</span>
 						</h3>
-						<p>New Arrivals On Sale</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+
 					</div>
 				</div>
 			</div>
@@ -379,32 +476,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container">
 					<div class="carousel-caption">
 						<h3>
-							The Biggest <span>Sale</span>
+							Kid's <span>Section</span>
 						</h3>
-						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+
 					</div>
 				</div>
 			</div>
-			<div class="item item4">
+			<div class="item item3">
 				<div class="container">
 					<div class="carousel-caption">
 						<h3>
-							Summer <span>Collection</span>
+							Electronics <span>Section</span>
 						</h3>
-						<p>New Arrivals On Sale</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
-					</div>
-				</div>
-			</div>
-			<div class="item item5">
-				<div class="container">
-					<div class="carousel-caption">
-						<h3>
-							The Biggest <span>Sale</span>
-						</h3>
-						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+
 					</div>
 				</div>
 			</div>
@@ -419,9 +503,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</a>
 		<!-- The Modal -->
 	</div>
-	
+
 	<!--/grids-->
-		<!-- /new_arrivals-->
+	<!-- /new_arrivals-->
 	<div class="new_arrivals_agile_w3ls_info">
 		<div class="container">
 			<h3 class="wthree_text_info">
@@ -444,17 +528,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/m1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">Formal Blue Shirt</a>
+										<a href="single.html">Formal Blue Shirt</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
+										<span class="item_price">$45.99</span><br />
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
@@ -505,17 +589,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/m1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">Formal Blue Shirt</a>
+										<a href="single.html">Formal Blue Shirt</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
+										<span class="item_price">$45.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
@@ -566,17 +650,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/m1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">Formal Blue Shirt</a>
+										<a href="single.html">Formal Blue Shirt</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
+										<span class="item_price">$45.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
@@ -627,17 +711,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/m1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">Formal Blue Shirt</a>
+										<a href="single.html">Formal Blue Shirt</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
+										<span class="item_price">$45.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
@@ -680,249 +764,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</div>
 							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/m1.jpg" alt="" class="pro-image-front">
-									<img src="images/m1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">Formal Blue Shirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to cart"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to Wishlist"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/m1.jpg" alt="" class="pro-image-front">
-									<img src="images/m1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">Formal Blue Shirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to cart"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to Wishlist"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/m1.jpg" alt="" class="pro-image-front">
-									<img src="images/m1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">Formal Blue Shirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to cart"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to Wishlist"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/m1.jpg" alt="" class="pro-image-front">
-									<img src="images/m1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">Formal Blue Shirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$45.99</span>						
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to cart"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>
-										<!-- <form action="#" method="post">
-											<fieldset>
-												<input type="hidden" name="cmd" value="_cart" /> <input
-													type="hidden" name="add" value="1" /> <input type="hidden"
-													name="business" value=" " /> <input type="hidden"
-													name="item_name" value="Formal Blue Shirt" /> <input
-													type="hidden" name="amount" value="30.99" /> <input
-													type="hidden" name="discount_amount" value="1.00" /> <input
-													type="hidden" name="currency_code" value="USD" /> <input
-													type="hidden" name="return" value=" " /> <input
-													type="hidden" name="cancel_return" value=" " /> <input
-													type="submit" name="submit" value="Add to Wishlist"
-													class="button" />
-											</fieldset>
-										</form> -->
-									</div>
-
-								</div>
+							<div class="col-md-1 col-md-offset-11" style="margin-top: 1em;">
+								<a href="mens"><button class="btn btn-primary">More</button></a>
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -937,7 +780,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -946,135 +789,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>																	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>																
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>																
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>															
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>		
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
@@ -1085,7 +800,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="images/w1.jpg" alt="" class="pro-image-front">
+									<img src="images/w1.jpg" alt="" class="pro-image-back">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.html" class="link-product-add-cart">Quick
+												View</a>
+										</div>
+									</div>
+
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">A-line Black Skirt</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$130.99</span>
+									</div>
+									<div
+										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
+										<div class="box">ADD TO CART</div>
+									</div>
+									<div
+										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1097,7 +845,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1106,18 +854,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>		
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1129,7 +877,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1138,53 +886,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
+						<div class="col-md-1 col-md-offset-11" style="margin-top: 1em;">
+							<a href="mens"><button class="btn btn-primary">More</button></a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -1197,7 +916,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1206,135 +925,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>																	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>																
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>																
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>															
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>		
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
@@ -1345,7 +936,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="images/w1.jpg" alt="" class="pro-image-front">
+									<img src="images/w1.jpg" alt="" class="pro-image-back">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a href="single.html" class="link-product-add-cart">Quick
+												View</a>
+										</div>
+									</div>
+
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">A-line Black Skirt</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$130.99</span>
+									</div>
+									<div
+										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
+										<div class="box">ADD TO CART</div>
+									</div>
+									<div
+										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1357,7 +981,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1366,18 +990,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>		
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1389,7 +1013,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1398,53 +1022,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
+						<div class="col-md-1 col-md-offset-11" style="margin-top: 1em;">
+							<a href="mens"><button class="btn btn-primary">More</button></a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -1456,7 +1051,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1465,135 +1060,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>																	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>																
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>																
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>															
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>		
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$130.99</span>
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
-									</div>
-									<div
-										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/w1.jpg" alt="" class="pro-image-front">
-									<img src="images/w1.jpg" alt="" class="pro-image-back">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
@@ -1604,7 +1071,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1616,7 +1083,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1625,18 +1092,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>		
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1648,7 +1115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1657,18 +1124,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>	
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
@@ -1680,7 +1147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<img src="images/w1.jpg" alt="" class="pro-image-back">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="single" class="link-product-add-cart">Quick
+											<a href="single.html" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1689,34 +1156,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single">A-line Black Skirt</a>
+										<a href="single.html">A-line Black Skirt</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$130.99</span>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-cart">
-										<div class="box">ADD TO CART</div>	
+										<div class="box">ADD TO CART</div>
 									</div>
 									<div
 										class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2 add-to-wishlist">
-										<div class="box">ADD TO WISHLIST</div>		
+										<div class="box">ADD TO WISHLIST</div>
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="col-md-1 col-md-offset-11" style="margin-top: 1em;">
+							<a href="mens"><button class="btn btn-primary">More</button></a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
 				</div>
 				<!-- /add-to-cart -->
 				<div class="col-md-6 col-md-offset-3 cart-box" id="cart-box">
-					<div style="font-size: 1.5em;float: right;cursor: pointer;" id="close-cart">&times</div>
+					<div style="font-size: 1.5em; float: right; cursor: pointer;"
+						id="close-cart">&times</div>
 					<div style="margin-top: 2em;">ADDED TO CART</div>
 				</div>
 				<!-- //add-to-cart -->
 				<!-- /add-to-wishlist -->
 				<div class="col-md-6 col-md-offset-3 cart-box" id="wishlist-box">
-					<div style="font-size: 1.5em;float: right;cursor: pointer;" id="close-wishlist">&times</div>
+					<div style="font-size: 1.5em; float: right; cursor: pointer;"
+						id="close-wishlist">&times</div>
 					<div style="margin-top: 2em;">ADDED TO WISHLIST</div>
 				</div>
 				<!-- //add-to-wishlist -->
@@ -1726,7 +1198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //new_arrivals -->
 	<!-- 	<!-- /we-offer -->
 
-	
+
 	<div class="clearfix"></div>
 	</div>
 
@@ -1975,90 +1447,118 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- for bootstrap working -->
 	<script type="text/javascript" src="js/bootstrap.js"></script>
-	
-	
-	
-	
+
+
+
+
 	<script type="text/javascript">
-$(document).ready(function(){
-	$(".add-to-cart").on('click', function(){
-		console.log("add-to-cart");
-		$("#cart-box").css("display", "block");
-	});
-	$("#close-cart").on('click', function(){
-		console.log("close cart");
-		$("#cart-box").css("display", "none");
-	});
-	$(".add-to-wishlist").on('click', function(){
-		console.log("add-to-wishlist");
-		$("#wishlist-box").css("display", "block");
-	});
-	$("#close-wishlist").on('click', function(){
-		console.log("close wishlist");
-		$("#wishlist-box").css("display", "none");
-	});
-});
+		$(document).ready(function() {
+			$(".add-to-cart").on('click', function() {
+				console.log("add-to-cart");
+				$("#cart-box").css("display", "block");
+			});
+			$("#close-cart").on('click', function() {
+				console.log("close cart");
+				$("#cart-box").css("display", "none");
+			});
+			$(".add-to-wishlist").on('click', function() {
+				console.log("add-to-wishlist");
+				$("#wishlist-box").css("display", "block");
+			});
+			$("#close-wishlist").on('click', function() {
+				console.log("close wishlist");
+				$("#wishlist-box").css("display", "none");
+			});
+		});
+	</script>
 
 
-</script>
-
-<script type="text/javascript">
-		function validationPwd(){
-			
-			var pwd = document.getElementById("pwd2").value;
-			var cpwd = document.getElementById("pwd3").value;
-			console.log(pwd+" "+cpwd);
-			if(pwd==cpwd){
-				console.log("true");
-				
-				return true;
+	<!-- Validating number and password for merchant -->
+	<script type="text/javascript">
+		function validationPwd() {
+			var ret1 = checkNumber1();
+			var flag = 0;
+			var flag1 = 0;
+			console.log(ret1);
+			var pwd1 = document.getElementById("pwd2").value;
+			var cpwd1 = document.getElementById("pwd3").value;
+			console.log(pwd1 + " " + cpwd1);
+			if (ret1) {
+				flag = 1;
 			}
-			else{
+			if (pwd1 == cpwd1) {
+				console.log("true");
+				flag1 = 1;
+			} else {
 				alert("Password does not match");
 				console.log("false");
-				
+
+			}
+
+			if (flag == 1 && flag1 == 1)
+				return true;
+			else
+				return false;
+		}
+		function checkNumber1() {
+			console.log("Hi!")
+			var phone = document.getElementById("phone1").value;
+			var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			console.log(phone);
+			if (phone.match(phoneNum)) {
+				console.log("true");
+				return true;
+			} else {
+				alert("Enter valid number");
 				return false;
 			}
 		}
-		</script>
-		<script type="text/javascript">
-		function validationPwd1(){
-			
+	</script>
+	<!-- //Validating number and password for merchant -->
+
+	<!-- Validating number and password for customer  -->
+	<script type="text/javascript">
+		function validationPwd1() {
+			var ret = checkNumber();
+			var flag = 0;
+			var flag1 = 0;
+			console.log(ret);
 			var pwd = document.getElementById("password2").value;
 			var cpwd = document.getElementById("password3").value;
-			console.log(pwd+" "+cpwd);
-			if(pwd==cpwd){
-				console.log("true");
-				
-				return true;
+			console.log(pwd + " " + cpwd);
+			if (ret) {
+				flag = 1;
 			}
-			else{
+			if (pwd == cpwd) {
+				console.log("true");
+				flag1 = 1;
+			} else {
 				alert("Password does not match");
 				console.log("false");
-				
+
+			}
+
+			if (flag == 1 && flag1 == 1)
+				return true;
+			else
+				return false;
+
+		}
+
+		function checkNumber() {
+
+			var phone = document.getElementById("phone").value;
+			var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			console.log(phone);
+			if (phone.match(phoneNum)) {
+				console.log("true");
+				return true;
+			} else {
+				alert("Enter valid number");
 				return false;
 			}
 		}
-		</script>
-		
-		
-		
-		<script type="text/javascript">
-
-  function checkPassword()
-  {
-    // at least one number, one lowercase and one uppercase letter
-    // at least six characters
-    var str=document.getElementById("pwd2").value;
-    var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-    console.log(str);
-   if(re.matches(str));
-    return true;
-    else
-    	alert("Password is not of required fields! Enter again")
-    	return false;
-  }
-
-</script>
+	</script>
+	<!--// Validating number and password for customer  -->
 </body>
 </html>
