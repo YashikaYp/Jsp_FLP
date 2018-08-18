@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span></span>
 							</div>
 							<div class="clearfix">
-								<a href="#" class="btn btn-default" role="button">Forgot
+								<a href="forget-pwd-email" class="btn btn-default" role="button">Forgot
 									Password?</a> <span></span>
 							</div>
 							<br> <input type="submit" value="Sign In"> </br>
