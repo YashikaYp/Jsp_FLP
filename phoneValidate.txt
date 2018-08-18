@@ -1,0 +1,10 @@
+var phone = document.getElementById("phone").value;
+var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+if(phone.match(phoneNum)) {
+return true;
+}				           
+else
+{
+alert("Enter valid number");
+return false;
+}							
