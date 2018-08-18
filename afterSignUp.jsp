@@ -78,15 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li style="line-height: 3em;font-size: 1em";><a href="#" data-toggle="modal" data-target="#myModal"><i
 						class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
 				
-				<li style="width: 25%;float: right;border-right: black;">
-					<div class="header-middle">
-					<form action="#" method="post">
-						<input type="search" name="search" placeholder="Search here..."
-							required=""> <input type="submit" value=" ">
-						<div class="clearfix"></div>
-					</form>
-					</div>
-				</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -132,33 +124,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									class="menu__link" href="index.html">Home <span
 										class="sr-only">(current)</span></a></li>
 								<li class=" menu__item"><a class="menu__link"
-									href="about.html">About</a></li>
+									href="about">About</a></li>
 								<li class=" menu__item"><a class="menu__link"
-									href="about.html">Men's Wear</a></li>
+									href="mens">Men's Wear</a></li>
 								<li class=" menu__item"><a class="menu__link"
-									href="about.html">Women's Wear</a></li>
+									href="womens">Women's Wear</a></li>
 								<li class=" menu__item"><a class="menu__link"
-									href="about.html">Kid's Wear</a></li>
+									href="kids">Kid's Wear</a></li>
 								<li class=" menu__item"><a class="menu__link"
-									href="about.html">Electronics</a></li>
+									href="electronics">Electronics</a></li>
 
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</div>
-			<div class="top_nav_right">
-				<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-					<form action="#" method="post" class="last">
-						<input type="hidden" name="cmd" value="_cart"> <input
-							type="hidden" name="display" value="1">
-						<button class="w3view-cart" type="submit" name="submit" value="">
-							<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-						</button>
-					</form>
-
-				</div>
-			</div>
+		
 			<div class="clearfix"></div>
 		</div>
 	</div>
@@ -175,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-body modal-body-sub_agile">
 					<div class="col-md-8 modal_body_left modal_body_left1">
 						<h3 class="agileinfo_sign">Sign In</h3>
-						<form action="#" method="post">
+						<form action="customer-homepage" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" name="Name" required=""> <label>Name</label>
 								<span></span>
